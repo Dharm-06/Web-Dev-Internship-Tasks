@@ -1,0 +1,80 @@
+/* Universal Selector */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* Body Styling */
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f4f7fc;
+    color:#333;
+}
+
+/* Header */
+header{
+    background: linear-gradient (toright,#2563eb,#1e3a8a);
+    color:white;
+    text-align:center;
+    padding:40 px;
+}
+
+/* Element Selectors */
+h1{
+    font-size:40 px;
+    margin-bottom:10 px;
+}
+
+h2{
+    color:#2563eb;
+    margin-bottom:15 px;
+}
+
+p{
+    font-size:16 px;
+    line-height:1.6;
+}
+
+/* Class Selectors */
+.form-section,
+.about-section{
+    background:white;
+    margin:30 px auto;
+    padding:25 px;
+    width:80 %;
+    border-radius:12 px;
+    box-shadow:0 4 px 10 px rgba (0,0,0,0.1);
+}
+
+/* Form Elements */
+input{
+    width:100 %;
+    padding:10 px;
+    margin:8 px 0 15 px;
+    border:1 px solid #ccc;
+    border-radius:6 px;
+}
+
+/* Button */
+button{
+    background:#16a34a;
+    color:white;
+    border:none;
+    padding:12 px 20 px;
+    border-radius:6 px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#15803d;
+}
+
+/* Footer */
+footer{
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:15 px;
+    margin-top:30 px;
+}
