@@ -1,0 +1,105 @@
+/* Universal Selector */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f7fc;
+    color: #333;
+}
+
+/* Element Selector */
+header{
+    background: #1e3a8a;
+    color: white;
+    text-align: center;
+    padding: 25 px;
+}
+
+h1{
+    font-size: 36 px;
+}
+
+h2{
+    color: #1e3a8a;
+    margin-bottom: 15 px;
+}
+
+p{
+    font-size: 16 px;
+}
+
+/* Class Selector */
+.form-section,
+.table-section{
+    background-color: white;
+    margin: 30 px;
+    padding: 25 px;
+    border-radius: 10 px;
+    box-shadow: 0 4 px 10 px rgba (0,0,0,0.1);
+}
+
+/* Form Styling */
+input,
+select,
+textarea{
+    width: 100 %;
+    padding: 10 px;
+    margin: 8 px 0 15 px;
+    border: 1 px solid #ccc;
+    border-radius: 5 px;
+}
+
+/* ID Selector Example */
+#special{
+    color: red;
+}
+
+/* Button */
+button{
+    background-color: #16a34a;
+    color: white;
+    border: none;
+    padding: 12 px 20 px;
+    border-radius: 5 px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #15803d;
+}
+
+/* Table Styling */
+table{
+    width: 100 %;
+    border-collapse: collapse;
+}
+
+th{
+    background-color: #2563eb;
+    color: white;
+}
+
+th,
+td{
+    border: 1 px solid #ddd;
+    padding: 12 px;
+    text-align: center;
+}
+
+tr:nth-child(even){
+    background-color: #f9fafb;
+}
+
+/* Footer */
+footer{
+    background-color: #111827;
+    color: white;
+    text-align: center;
+    padding: 15 px;
+    margin-top: 20 px;
+}
