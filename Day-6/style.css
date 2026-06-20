@@ -1,0 +1,104 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+/* Sticky Navbar */
+.navbar{
+    position:sticky;
+    top:0;
+    background:#222;
+    padding:15px;
+    z-index:1000;
+}
+
+.navbar ul{
+    text-align:center;
+}
+
+.navbar li{
+    display:inline-block;
+    margin:0 15px;
+}
+
+.navbar a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* Hero Section */
+.hero{
+    height:100vh;
+    width:100vw;
+    background:linear-gradient(to right,#007bff,#00c6ff);
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:3rem;
+}
+
+.hero p{
+    margin:15px 0;
+}
+
+/* Inline Block Button */
+.btn{
+    display:inline-block;
+    padding:12px 25px;
+    background:white;
+    color:#007bff;
+    text-decoration:none;
+    border-radius:5px;
+}
+
+/* Block Display */
+.section{
+    display:block;
+    padding:50px 20px;
+}
+
+/* Inline Display */
+.skill{
+    display:inline;
+    font-weight:bold;
+    margin-right:20px;
+    color:#007bff;
+}
+
+/* Overflow Section */
+.overflow-box{
+    height:200px;
+    overflow:auto;
+    border:2px solid #333;
+    padding:15px;
+    margin-top:20px;
+}
+
+/* Footer */
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* Fixed Contact Button */
+.contact-btn{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    padding:15px 20px;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:bold;
+}
