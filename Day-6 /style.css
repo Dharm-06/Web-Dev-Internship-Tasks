@@ -1,0 +1,122 @@
+```css
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#FFF9C4;
+    color:#333;
+}
+
+/* Hero Section */
+.hero{
+    height:100vh;
+    width:100vw;
+    background:linear-gradient(135deg,#FFD54F,#FFC107);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:60px;
+}
+
+.hero p{
+    margin:15px 0;
+}
+
+/* Inline Block */
+.btn{
+    display:inline-block;
+    background:#222;
+    color:white;
+    padding:12px 25px;
+    text-decoration:none;
+    border-radius:30px;
+}
+
+/* Sticky Navbar */
+nav{
+    position:sticky;
+    top:0;
+    background:#FBC02D;
+    text-align:center;
+    padding:15px;
+    z-index:1000;
+}
+
+nav a{
+    display:inline-block;
+    margin:0 15px;
+    text-decoration:none;
+    color:#222;
+    font-weight:bold;
+}
+
+/* Block Display */
+.box{
+    display:block;
+    background:#FFFDE7;
+    margin:20px;
+    padding:25px;
+    border-radius:10px;
+}
+
+/* Inline Display */
+.skill{
+    display:inline;
+    color:#E65100;
+    font-weight:bold;
+    margin-right:20px;
+}
+
+.project{
+    background:#FFF8E1;
+    padding:15px;
+    margin-top:10px;
+    border-left:5px solid #FF9800;
+}
+
+/* Overflow Section */
+.overflow-box{
+    height:200px;
+    overflow:auto;
+    padding:15px;
+    background:#FFF8E1;
+}
+
+h2{
+    color:#E65100;
+    margin-bottom:15px;
+}
+
+/* Footer */
+footer{
+    background:#FBC02D;
+    text-align:center;
+    padding:15px;
+}
+
+/* Fixed Contact Button */
+.contact-btn{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#FF9800;
+    color:white;
+    text-decoration:none;
+    padding:15px 20px;
+    border-radius:50px;
+    font-weight:bold;
+}
+```
