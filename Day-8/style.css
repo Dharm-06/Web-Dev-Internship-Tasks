@@ -1,0 +1,200 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    /* RED BACKGROUND */
+    background:#d62828;
+
+    padding:30px;
+}
+
+/* Main Container */
+
+.container{
+    width:1200px;
+    background:#ffffff;
+    border-radius:30px;
+    padding:25px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.25);
+}
+
+/* Navbar */
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.logo{
+    font-size:32px;
+    font-weight:bold;
+}
+
+ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+li{
+    cursor:pointer;
+}
+
+.buttons{
+    display:flex;
+    gap:10px;
+}
+
+.login{
+    border:none;
+    background:#ececec;
+    padding:10px 20px;
+    border-radius:20px;
+}
+
+.signup{
+    border:none;
+    background:#111;
+    color:white;
+    padding:10px 20px;
+    border-radius:20px;
+}
+
+/* Grid */
+
+.grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    grid-template-rows:260px 190px;
+    gap:15px;
+}
+
+.card{
+    border-radius:25px;
+    padding:25px;
+}
+
+/* Large Left Card */
+
+.hero{
+    grid-row:1 / span 2;
+
+    /* DARK BLUE */
+    background:#1d3557;
+    color:white;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+
+.hero h1{
+    font-size:60px;
+    line-height:1.05;
+}
+
+.shop-btn{
+    width:180px;
+    padding:15px;
+    border:none;
+    border-radius:15px;
+    background:white;
+    font-weight:bold;
+}
+
+/* Blog Card */
+
+.blog{
+    grid-column:2 / span 2;
+
+    /* ORANGE */
+    background:#f4a261;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+
+.blog h2{
+    font-size:48px;
+}
+
+/* About Card */
+
+.about{
+    /* PURPLE */
+    background:#9b5de5;
+    color:white;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+
+.about h2{
+    font-size:42px;
+}
+
+/* Contact Card */
+
+.contact{
+    /* TEAL */
+    background:#2ec4b6;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+
+.contact h2{
+    font-size:42px;
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+    .grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero,
+    .blog,
+    .about,
+    .contact{
+        grid-column:auto;
+        grid-row:auto;
+        min-height:220px;
+    }
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:40px;
+    }
+
+    .blog h2,
+    .about h2,
+    .contact h2{
+        font-size:30px;
+    }
+}
