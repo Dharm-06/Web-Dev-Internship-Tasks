@@ -1,0 +1,279 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+    transition:0.3s ease;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    /* Gradient Background */
+    background:linear-gradient(135deg,#d62828,#e76f51);
+
+    padding:30px;
+}
+
+/* Main Container */
+
+.container{
+    width:1200px;
+    background:#ffffff;
+    border-radius:30px;
+    padding:25px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.25);
+
+    /* Fade In Animation */
+    animation:fadeIn 1s ease;
+}
+
+/* Navbar */
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.logo{
+    font-size:32px;
+    font-weight:bold;
+}
+
+ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+li{
+    cursor:pointer;
+}
+
+/* Navigation Hover Effects */
+
+li:hover{
+    color:#ff9800;
+    transform:scale(1.1);
+    text-decoration:underline;
+}
+
+.buttons{
+    display:flex;
+    gap:10px;
+}
+
+.login{
+    border:none;
+    background:#ececec;
+    padding:10px 20px;
+    border-radius:20px;
+    cursor:pointer;
+}
+
+.signup{
+    border:none;
+    background:linear-gradient(45deg,#111,#444);
+    color:white;
+    padding:10px 20px;
+    border-radius:20px;
+    cursor:pointer;
+}
+
+/* Button Hover Effects */
+
+.login:hover,
+.signup:hover,
+.shop-btn:hover{
+    transform:scale(1.08);
+    box-shadow:0 8px 20px rgba(0,0,0,0.25);
+}
+
+.login:hover{
+    background:#dcdcdc;
+}
+
+.signup:hover{
+    background:#222;
+}
+
+/* Grid */
+
+.grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    grid-template-rows:260px 190px;
+    gap:15px;
+}
+
+.card{
+    border-radius:25px;
+    padding:25px;
+
+    /* Card Shadow */
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+}
+
+/* Card Hover Effects */
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 30px rgba(0,0,0,0.25);
+}
+
+/* Large Left Card */
+
+.hero{
+    grid-row:1 / span 2;
+
+    background:#1d3557;
+    color:white;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+
+    /* Floating Animation */
+    animation:floating 4s ease-in-out infinite;
+}
+
+.hero h1{
+    font-size:60px;
+    line-height:1.05;
+}
+
+.shop-btn{
+    width:180px;
+    padding:15px;
+    border:none;
+    border-radius:15px;
+    background:white;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+/* Blog Card */
+
+.blog{
+    grid-column:2 / span 2;
+
+    background:#f4a261;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+
+.blog h2{
+    font-size:48px;
+}
+
+/* About Card */
+
+.about{
+    background:#9b5de5;
+    color:white;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+
+.about h2{
+    font-size:42px;
+}
+
+/* Contact Card */
+
+.contact{
+    background:#2ec4b6;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+
+.contact h2{
+    font-size:42px;
+}
+
+/* Image Hover Effects */
+
+img{
+    transition:0.4s ease;
+}
+
+img:hover{
+    transform:scale(1.08);
+    filter:brightness(115%);
+}
+
+/* Floating Animation */
+
+@keyframes floating{
+    0%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-10px);
+    }
+    100%{
+        transform:translateY(0);
+    }
+}
+
+/* Fade In Animation */
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+    .grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero,
+    .blog,
+    .about,
+    .contact{
+        grid-column:auto;
+        grid-row:auto;
+        min-height:220px;
+    }
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:40px;
+    }
+
+    .blog h2,
+    .about h2,
+    .contact h2{
+        font-size:30px;
+    }
+}
