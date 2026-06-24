@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hearing Technology | Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">◉</div>
+        <div class="nav-links">
+            <a href="#">Products</a>
+            <a href="#">App</a>
+            <a href="#">About</a>
+            <a href="#">FAQ</a>
+        </div>
+        <div class="auth-buttons">
+            <button class="login-btn">LOG IN</button>
+            <button class="signup-btn">SIGN UP</button>
+        </div>
+        <div class="hamburger">☰</div>
+    </nav>
+
+    <main>
+        <div class="main-grid">
+            <!-- Teal Card -->
+            <div class="card teal-card">
+                <div class="card-content">
+                    <span class="label">MORE OFFERS</span>
+                    <h1>There is something else for you</h1>
+                    <button class="all-products-btn">All Products →</button>
+                </div>
+            </div>
+
+            <!-- Right Side -->
+            <div class="right-section">
+                <div class="card orange-card">
+                    <span class="label">WORLD OF HEARING TECHNOLOGY</span>
+                    <h2>View our blog</h2>
+                </div>
+
+                <div class="bottom-cards">
+                    <div class="card purple-card">
+                        <span class="label">DISCOVER OUR STORY</span>
+                        <h3>About us</h3>
+                    </div>
+                    <div class="card pink-card">
+                        <span class="label">HAVE SOME QUESTIONS?</span>
+                        <h3>Contact us</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Hearing Technology. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelector('.hamburger').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
