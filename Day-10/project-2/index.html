@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ember &amp; Oak — Wood-Fired Bistro, Portland</title>
+  <link rel="stylesheet" href="restaurant.css" />
+</head>
+<body>
+
+  <!-- ═══ NAVIGATION ══════════════════════════════════════ -->
+  <header class="nav" id="nav">
+    <div class="container nav-inner">
+
+      <a href="#" class="nav-logo">EMBER &amp; OAK</a>
+
+      <nav class="nav-links" aria-label="Desktop navigation">
+        <button onclick="scrollTo('story')">Story</button>
+        <button onclick="scrollTo('menu')">Menu</button>
+        <button onclick="scrollTo('atmosphere')">Atmosphere</button>
+        <button onclick="scrollTo('reservations')" class="btn btn-primary" style="padding:.65rem 1.5rem;">Reserve a Table</button>
+      </nav>
+
+      <button class="nav-burger" id="burger" onclick="openMenu()" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Full-screen mobile menu -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation">
+    <button class="mobile-menu-close" onclick="closeMenu()" aria-label="Close menu">&times;</button>
+    <button onclick="scrollTo('story')">Our Story</button>
+    <button onclick="scrollTo('menu')">The Menu</button>
+    <button onclick="scrollTo('atmosphere')">Atmosphere</button>
+    <button onclick="scrollTo('reservations')" class="accent">Reservations</button>
+  </div>
+
+  <!-- ═══ HERO ════════════════════════════════════════════ -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="grad-fire" style="width:100%;height:100%;"></div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <p class="hero-subtitle">Portland, Oregon — Est. 2019</p>
+      <h1 class="h1 hero-title">Fire. Wood. Time.</h1>
+      <p class="hero-desc">
+        An upscale wood-fired bistro where the ingredients are taken
+        as seriously as the atmosphere.
+      </p>
+      <button class="btn btn-primary" onclick="scrollTo('reservations')">Book Your Table</button>
+    </div>
+  </section>
+
+  <!-- ═══ STORY ════════════════════════════════════════════ -->
+  <section class="section section-dark" id="story">
+    <div class="container">
+      <div class="split">
+
+        <div>
+          <h2 class="h2" style="margin-bottom:1rem;">
+            Old-growth forest meets open kitchen.
+          </h2>
+          <div class="divider"></div>
+          <p class="body-text" style="margin-bottom:1.25rem;">
+            Born from a love of the Pacific Northwest and the primal instinct
+            of cooking over open flame. At Ember &amp; Oak, we let the fire do
+            the talking. Our wood-fired hearth is the heartbeat of the restaurant,
+            infusing every dish with the subtle, unmistakable flavour of applewood
+            and oak.
+          </p>
+          <p class="body-text">
+            We partner with local foragers, coastal fishermen, and organic farmers
+            to bring you a menu that changes with the wind, but remains steadfast
+            in its dedication to quality.
+          </p>
+        </div>
+
+        <div class="img-frame">
+          <div class="grad-forest placeholder-label" style="aspect-ratio:4/3;">
+            Open Fire Kitchen
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ MENU ══════════════════════════════════════════════ -->
+  <section class="section" id="menu">
+    <div class="container">
+
+      <div style="text-align:center;max-width:640px;margin:0 auto;">
+        <h2 class="h2" style="margin-bottom:1rem;">From the Hearth</h2>
+        <p class="body-text">
+          Our menu is written daily on chalkboards, guided by the morning's
+          harvest and the heat of the embers. Here is a taste of what to expect.
+        </p>
+      </div>
+
+      <div class="menu-grid">
+
+        <!-- Starters -->
+        <div>
+          <h3 class="h3 menu-category-title">To Begin</h3>
+          <div class="menu-items">
+
+            <div>
+              <div class="menu-item-header">
+                <span class="menu-item-name">Charred Pacific Oysters</span>
+                <span class="menu-item-price">$24</span>
+              </div>
+              <p class="menu-item-desc">Smoked bone marrow butter, sea bean gremolata, lemon</p>
+            </div>
+
+            <div>
+              <div class="menu-item-header">
+                <span class="menu-item-name">Hearth-Roasted Bone Marrow</span>
+                <span class="menu-item-price">$28</span>
+              </div>
+              <p class="menu-item-desc">Grilled sourdough, parsley caper salad, pickled shallots</p>
+            </div>
+
+            <div>
+              <div class="menu-item-header">
+                <span class="menu-item-name">Foraged Mushroom Tartine</span>
+                <span class="menu-item-price">$22</span>
+              </div>
+              <p class="menu-item-desc">Chanterelles, whipped ricotta, thyme oil, ember-baked crust</p>
+            </div>
+
+            <div>
+              <div class="menu-item-header">
+                <span class="menu-item-name">Smoked Beet Salad</span>
+                <span class="menu-item-price">$19</span>
+              </div>
+              <p class="menu-item-desc">Hazelnut vinaigrette, ash goat cheese, micro herbs</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Mains -->
+        <div>
+          <h3 class="h3 menu-category-title">From the Embers</h3>
+          <div class="menu-items">
+
+            <div>
+              <div class="menu-item-header">
+                <span class="menu-item-name">Dry-Aged Ribeye (Serves 2)</span>
+                <span class="menu-item-price">$145</span>
+              </div>
+              <p class="menu-item-desc">Oak-grilled, smoked beef fat potatoes, charred broccolini, bordelaise</p>
+            </div>
+
+            <div>
+              <div class="menu-item-header">
+                <span class="menu-item-name">Cedar-Plank King Salmon</span>
+                <span class="menu-item-price">$48</span>
+              </div>
+              <p class="menu-item-desc">Foraged berry glaze, burnt leek puree, wild rice crisp</p>
+            </div>
+
+            <div>
+              <div class="menu-item-header">
+                <span class="menu-item-name">Smoked Celeriac</span>
+                <span class="menu-item-price">$32</span>
+              </div>
+              <p class="menu-item-desc">Hazelnut milk, black truffle, crispy sunchokes, herb oil</p>
+            </div>
+
+            <div>
+              <div class="menu-item-header">
+                <span class="menu-item-name">Lamb Shoulder (Serves 2)</span>
+                <span class="menu-item-price">$96</span>
+              </div>
+              <p class="menu-item-desc">12-hour ember-braised, pomegranate jus, grilled flatbread</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <div style="text-align:center;margin-top:4rem;">
+        <a href="#" class="btn btn-outline">View Full Menu</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══ ATMOSPHERE ════════════════════════════════════════ -->
+  <section class="section section-dark" id="atmosphere">
+    <div class="container">
+      <div class="split reverse">
+
+        <div class="img-frame">
+          <div class="grad-amber placeholder-label" style="aspect-ratio:4/3;">
+            Candlelight &amp; Timber
+          </div>
+        </div>
+
+        <div>
+          <h2 class="h2" style="margin-bottom:1rem;">
+            Linger over the last glass.
+          </h2>
+          <div class="divider"></div>
+          <p class="body-text" style="margin-bottom:1.25rem;">
+            The smell of woodsmoke. The warmth of candlelight. The deep resonance
+            of reclaimed timber. We designed Ember &amp; Oak to be a place where
+            time slows down.
+          </p>
+          <p class="body-text">
+            Our cellar features an extensive collection of low-intervention wines
+            from the Pacific Northwest and beyond, carefully selected to complement
+            the bold, elemental flavours of our hearth. Let our sommelier guide you
+            to the perfect pairing.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ QUOTE BANNER ═════════════════════════════════════ -->
+  <div class="quote-banner">
+    <div class="grad-smoke" style="position:absolute;inset:0;"></div>
+    <div class="quote-banner-overlay">
+      <blockquote>"The primal elegance of fire."</blockquote>
+    </div>
+  </div>
+
+  <!-- ═══ TESTIMONIALS ══════════════════════════════════════ -->
+  <section class="section" id="testimonials">
+    <div class="container">
+
+      <div style="text-align:center;margin-bottom:3.5rem;">
+        <h2 class="h2">What they're saying</h2>
+      </div>
+
+      <div class="testimonials-grid">
+
+        <div class="testimonial-card">
+          <div class="stars">
+            <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+          </div>
+          <p class="testimonial-quote">
+            "The most compelling dining experience in the city. The dry-aged
+            ribeye is a masterclass in fire control."
+          </p>
+          <div class="testimonial-source">— The Pacific Tribune</div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">
+            <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+          </div>
+          <p class="testimonial-quote">
+            "Unpretentious yet wildly sophisticated. It feels like you're eating
+            in a very wealthy lumberjack's dining room."
+          </p>
+          <div class="testimonial-source">— Eater NW</div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">
+            <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+          </div>
+          <p class="testimonial-quote">
+            "A restaurant that understands restraint. Every element earns its
+            place on the plate — and in your memory."
+          </p>
+          <div class="testimonial-source">— Bon Appetit</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ RESERVATIONS ══════════════════════════════════════ -->
+  <section class="section section-dark" id="reservations">
+    <div class="container">
+      <div class="reservation-box">
+
+        <div style="text-align:center;margin-bottom:2.5rem;">
+          <h2 class="h2" style="margin-bottom:0.75rem;">Reserve Your Table</h2>
+          <p class="body-text" style="color:var(--muted);">We accept reservations up to 60 days in advance.</p>
+        </div>
+
+        <form class="res-form" onsubmit="handleReservation(event)">
+          <div class="res-grid">
+
+            <div class="form-group">
+              <label class="form-label" for="res-date">Date</label>
+              <input class="form-input" type="date" id="res-date" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="res-time">Time</label>
+              <select class="form-select" id="res-time" required>
+                <option value="" disabled selected>Select a time</option>
+                <option value="17:00">5:00 PM</option>
+                <option value="17:30">5:30 PM</option>
+                <option value="18:00">6:00 PM</option>
+                <option value="18:30">6:30 PM</option>
+                <option value="19:00">7:00 PM</option>
+                <option value="19:30">7:30 PM</option>
+                <option value="20:00">8:00 PM</option>
+                <option value="20:30">8:30 PM</option>
+                <option value="21:00">9:00 PM</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="res-guests">Guests</label>
+              <select class="form-select" id="res-guests" required>
+                <option value="1">1 Person</option>
+                <option value="2" selected>2 People</option>
+                <option value="3">3 People</option>
+                <option value="4">4 People</option>
+                <option value="5">5 People</option>
+                <option value="6">6 People</option>
+                <option value="large">7+ (Call Us)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="res-name">Name</label>
+              <input class="form-input" type="text" id="res-name" required placeholder="Your full name" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="res-email">Email</label>
+              <input class="form-input" type="email" id="res-email" required placeholder="you@example.com" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="res-phone">Phone</label>
+              <input class="form-input" type="tel" id="res-phone" placeholder="(555) 000-0000" />
+            </div>
+
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width:100%;margin-top:0.5rem;font-size:0.85rem;padding:1.1rem;">
+            Find a Table &#8594;
+          </button>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div>
+          <div class="footer-brand">Ember &amp; Oak</div>
+          <p class="footer-text">
+            An upscale wood-fired bistro exploring the culinary traditions of
+            the Pacific Northwest through the lens of open fire.
+          </p>
+        </div>
+
+        <div>
+          <div class="footer-heading">Location &amp; Hours</div>
+          <p class="footer-text">
+            1240 Forest Ave<br>Portland, OR 97205
+          </p>
+          <p class="footer-text" style="margin-top:1rem;">
+            Wednesday – Sunday<br>5:00 PM – 10:00 PM
+          </p>
+        </div>
+
+        <div>
+          <div class="footer-heading">Contact</div>
+          <div class="footer-contact">
+            <a href="tel:+15551234567">(555) 123-4567</a>
+            <a href="mailto:reservations@emberandoak.com">reservations@emberandoak.com</a>
+          </div>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram">Instagram</a>
+            <a href="#" aria-label="Facebook">Facebook</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        &copy; <span id="yr"></span> Ember &amp; Oak Bistro. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast notification -->
+  <div class="toast" id="toast">
+    <strong>Reservation Requested</strong>
+    We'll be in touch to confirm your table within 24 hours.
+  </div>
+
+  <!-- ═══ SCRIPTS ══════════════════════════════════════════ -->
+  <script>
+    /* Year */
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    /* Smooth scroll to section */
+    function scrollTo(id) {
+      closeMenu();
+      var el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    /* Mobile menu */
+    function openMenu() {
+      document.getElementById('mobileMenu').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMenu() {
+      document.getElementById('mobileMenu').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeMenu();
+    });
+
+    /* Nav scroll effect */
+    window.addEventListener('scroll', function () {
+      var nav = document.getElementById('nav');
+      if (window.scrollY > 60) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    });
+
+    /* Reservation form */
+    function handleReservation(e) {
+      e.preventDefault();
+      var toast = document.getElementById('toast');
+      toast.classList.add('show');
+      setTimeout(function () { toast.classList.remove('show'); }, 4000);
+      e.target.reset();
+    }
+  </script>
+
+</body>
+</html>
