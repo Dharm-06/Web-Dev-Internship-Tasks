@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alex Rivera — Creative Full-Stack Developer</title>
+  <link rel="stylesheet" href="portfolio.css" />
+</head>
+<body>
+
+  <!-- ═══ NAVIGATION ══════════════════════════════════════ -->
+  <header class="nav">
+    <div class="container nav-inner">
+
+      <a href="#" class="nav-logo" onclick="closeDrawer()">ALEX<span>.</span>RIVERA</a>
+
+      <nav class="nav-links">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+        <a href="#contact" class="hire">Hire Me</a>
+      </nav>
+
+      <button class="nav-burger" onclick="openDrawer()" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile overlay + drawer -->
+  <div class="drawer-overlay" id="overlay" onclick="closeDrawer()"></div>
+
+  <div class="drawer" id="drawer" role="dialog" aria-label="Mobile navigation">
+    <button class="drawer-close" onclick="closeDrawer()" aria-label="Close menu">&times;</button>
+    <a href="#work"       onclick="closeDrawer()">Work</a>
+    <a href="#about"      onclick="closeDrawer()">About</a>
+    <a href="#skills"     onclick="closeDrawer()">Skills</a>
+    <a href="#experience" onclick="closeDrawer()">Experience</a>
+    <a href="#contact"    onclick="closeDrawer()">Contact</a>
+    <div class="drawer-hire">
+      <a href="#contact" onclick="closeDrawer()">Hire Me</a>
+    </div>
+  </div>
+
+  <!-- ═══ HERO ════════════════════════════════════════════ -->
+  <section class="hero" id="home">
+    <div class="hero-grid-bg" aria-hidden="true"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">Creative Full-Stack Developer</div>
+        <h1 class="h-hero hero-title">
+          I BUILD <span class="dim">DIGITAL</span><br>
+          PRODUCTS THAT<br>
+          <span class="accent">FEEL ALIVE.</span>
+        </h1>
+        <p class="hero-desc">
+          Bridging the gap between robust engineering and obsessive design.
+          Currently crafting high-performance interfaces for forward-thinking brands.
+        </p>
+        <div class="hero-btns">
+          <a href="#work"  class="btn-primary">View My Work &#8594;</a>
+          <a href="#about" class="btn-outline">Learn More</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll" aria-hidden="true">&#8964;</div>
+  </section>
+
+  <!-- ═══ ABOUT ════════════════════════════════════════════ -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-grid">
+
+        <!-- Image column — on mobile shows below text -->
+        <div class="about-img" style="order:2;">
+          <div class="about-img-wrap">
+            <div class="corner corner-tl"></div>
+            <div class="corner corner-tr"></div>
+            <div class="corner corner-bl"></div>
+            <div class="corner corner-br"></div>
+            <div class="avatar-placeholder" aria-label="Alex Rivera portrait placeholder">AR</div>
+            <div class="status-badge">
+              <strong>Status</strong>Available for work
+            </div>
+          </div>
+        </div>
+
+        <!-- Text column -->
+        <div class="about-text" style="order:1;">
+          <h2 class="h-section">
+            NOT JUST<br>
+            ANOTHER <span style="color:var(--primary)">DEV.</span>
+          </h2>
+          <div class="about-body t-body">
+            <p>I approach code with a designer's eye and design with an engineer's pragmatism. I don't just assemble components — I craft experiences that perform flawlessly and leave a lasting impression.</p>
+            <p>With over 6 years of experience across the entire stack, I specialize in building dense, data-heavy applications that don't feel like spreadsheets, and creative marketing sites that don't sacrifice performance.</p>
+            <p>My workshop is dark, my coffee is black, and my code is clean. Let's build something extraordinary together.</p>
+          </div>
+          <div class="stats">
+            <div><div class="stat-num">6+</div>  <div class="stat-label">Years Exp.</div></div>
+            <div><div class="stat-num">40+</div>  <div class="stat-label">Projects</div></div>
+            <div><div class="stat-num">12</div>   <div class="stat-label">Awards</div></div>
+            <div><div class="stat-num">100%</div> <div class="stat-label">Delivery</div></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SKILLS ════════════════════════════════════════════ -->
+  <section class="skills" id="skills">
+    <div class="container">
+      <div class="skills-header">
+        <div>
+          <span class="skills-tagline">My Arsenal</span>
+          <h2 class="h-section" style="margin-bottom:0">
+            Tools of the <span style="color:var(--primary)">Trade</span>
+          </h2>
+        </div>
+        <p class="skills-desc t-mono">
+          I don't just learn frameworks; I understand the underlying principles.
+          Here's what I use to bring ideas to life.
+        </p>
+      </div>
+
+      <div class="skills-grid">
+
+        <div class="skill-card">
+          <h3 class="skill-card-title">Frontend Engineering</h3>
+          <ul class="skill-list">
+            <li><span class="skill-dot"></span>React / Next.js</li>
+            <li><span class="skill-dot"></span>TypeScript</li>
+            <li><span class="skill-dot"></span>CSS / Tailwind</li>
+            <li><span class="skill-dot"></span>Framer Motion</li>
+            <li><span class="skill-dot"></span>WebGL / Three.js</li>
+            <li><span class="skill-dot"></span>State Management</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3 class="skill-card-title">Backend &amp; Systems</h3>
+          <ul class="skill-list">
+            <li><span class="skill-dot"></span>Node.js</li>
+            <li><span class="skill-dot"></span>PostgreSQL</li>
+            <li><span class="skill-dot"></span>Redis</li>
+            <li><span class="skill-dot"></span>GraphQL</li>
+            <li><span class="skill-dot"></span>REST APIs</li>
+            <li><span class="skill-dot"></span>Serverless / Edge</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3 class="skill-card-title">Design &amp; Craft</h3>
+          <ul class="skill-list">
+            <li><span class="skill-dot"></span>Figma</li>
+            <li><span class="skill-dot"></span>UI / UX Systems</li>
+            <li><span class="skill-dot"></span>Interaction Design</li>
+            <li><span class="skill-dot"></span>Typography</li>
+            <li><span class="skill-dot"></span>Performance Tuning</li>
+            <li><span class="skill-dot"></span>Accessibility (a11y)</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PROJECTS ══════════════════════════════════════════ -->
+  <section class="projects" id="work">
+    <div class="container">
+      <h2 class="h-section projects-title">Selected <span>Work</span></h2>
+
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <article class="project-card">
+          <div class="project-img-wrap">
+            <div class="proj-placeholder p1">
+              <span class="icon">&#9783;</span>
+              Fintech Dashboard
+            </div>
+            <div class="project-img-overlay"></div>
+          </div>
+          <div class="project-body">
+            <div class="project-cat">Dashboard UI / Engineering</div>
+            <h3 class="project-title">Fintech Command Center</h3>
+            <p class="project-desc">
+              A high-performance trading dashboard handling thousands of data
+              points per second with zero lag. Built with React, WebSockets,
+              and heavy Canvas optimizations.
+            </p>
+            <div class="project-tags">
+              <span class="tag">React</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">D3.js</span>
+              <span class="tag">WebSockets</span>
+            </div>
+            <a href="#" class="project-link">View Project &#8599;</a>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card">
+          <div class="project-img-wrap">
+            <div class="proj-placeholder p2">
+              <span class="icon">&#9752;</span>
+              Mobile Commerce
+            </div>
+            <div class="project-img-overlay"></div>
+          </div>
+          <div class="project-body">
+            <div class="project-cat">E-Commerce App</div>
+            <h3 class="project-title">Kicks Mobile Experience</h3>
+            <p class="project-desc">
+              A premium mobile-first e-commerce experience for a boutique
+              sneaker brand. Features fluid page transitions, complex filter
+              states, and robust offline support.
+            </p>
+            <div class="project-tags">
+              <span class="tag">React Native</span>
+              <span class="tag">Zustand</span>
+              <span class="tag">GraphQL</span>
+              <span class="tag">Stripe</span>
+            </div>
+            <a href="#" class="project-link">View Project &#8599;</a>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card">
+          <div class="project-img-wrap">
+            <div class="proj-placeholder p3">
+              <span class="icon">&#9699;</span>
+              Generative Art
+            </div>
+            <div class="project-img-overlay"></div>
+          </div>
+          <div class="project-body">
+            <div class="project-cat">Creative Coding</div>
+            <h3 class="project-title">Nexus Generative Art</h3>
+            <p class="project-desc">
+              An experimental WebGL experience visualizing complex network
+              interactions. Interactive particle systems responding to audio
+              input in real-time.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Three.js</span>
+              <span class="tag">GLSL</span>
+              <span class="tag">WebAudio API</span>
+              <span class="tag">R3F</span>
+            </div>
+            <a href="#" class="project-link">View Project &#8599;</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ EXPERIENCE ════════════════════════════════════════ -->
+  <section class="experience" id="experience">
+    <div class="container">
+      <h2 class="h-section experience-title">My <span>Journey</span></h2>
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-role">Senior Full-Stack Engineer</div>
+          <div class="timeline-company">Void Protocol</div>
+          <div class="timeline-year">2021 — Present</div>
+          <p class="timeline-desc">
+            Leading frontend architecture for a data-intensive security platform.
+            Reduced bundle size by 40% and improved Core Web Vitals to 98+ across the board.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-role">Frontend Developer</div>
+          <div class="timeline-company">Creative Studio X</div>
+          <div class="timeline-year">2018 — 2021</div>
+          <p class="timeline-desc">
+            Built award-winning promotional sites for Fortune 500 clients.
+            Specialized in complex WebGL animations and fluid layout systems.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-role">UI Engineer</div>
+          <div class="timeline-company">TechFlow Solutions</div>
+          <div class="timeline-year">2016 — 2018</div>
+          <p class="timeline-desc">
+            Transformed static design files into responsive, accessible React
+            components for a suite of enterprise B2B SaaS products.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CONTACT ══════════════════════════════════════════ -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-box">
+        <div class="contact-corner tl"></div>
+        <div class="contact-corner tr"></div>
+        <div class="contact-corner bl"></div>
+        <div class="contact-corner br"></div>
+
+        <h2 class="h-section contact-title">
+          Let's Build Something<br>
+          <span>Unforgettable.</span>
+        </h2>
+        <p class="contact-desc">
+          I'm currently available for freelance projects and open to full-time
+          opportunities. Whether you have a question or just want to say hi,
+          I'll try my best to get back to you!
+        </p>
+        <a href="mailto:hello@alexrivera.dev" class="contact-email">&#9993;&nbsp; Say Hello</a>
+
+        <div class="social-links">
+          <a href="#" aria-label="GitHub">GitHub</a>
+          <a href="#" aria-label="Twitter">Twitter</a>
+          <a href="#" aria-label="LinkedIn">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">ALEX<span>.</span>RIVERA</div>
+        <p class="footer-copy">
+          &copy; <span id="yr"></span> Built with intent. All rights reserved.
+        </p>
+        <div class="footer-location">Based in <strong>San Francisco</strong></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══ SCRIPTS ══════════════════════════════════════════ -->
+  <script>
+    /* Year */
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    /* Mobile drawer */
+    function openDrawer() {
+      document.getElementById('drawer').classList.add('open');
+      document.getElementById('overlay').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDrawer() {
+      document.getElementById('drawer').classList.remove('open');
+      document.getElementById('overlay').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeDrawer();
+    });
+  </script>
+
+</body>
+</html>
