@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitZone - Build Your Dream Body</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">🏋️ FitZone</div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Programs</a>
+            <a href="#">Trainers</a>
+            <a href="#">Membership</a>
+            <a href="#">Contact</a>
+        </div>
+        <button class="join-btn">Join Now</button>
+        <div class="hamburger">☰</div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>BUILD YOUR <span class="highlight">DREAM BODY</span></h1>
+            <p>Join the best fitness community and achieve your goals with expert trainers and customized workout plans.</p>
+            <div class="hero-buttons">
+                <button class="start-btn">Start Today</button>
+                <button class="video-btn">▶ Watch Video</button>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="https://picsum.photos/id/1015/800/900" alt="Fitness">
+        </div>
+    </section>
+
+    <section class="why-choose">
+        <h2>WHY CHOOSE FITZONE?</h2>
+        <div class="features">
+            <div class="feature-card">🏆<h3>Expert Trainers</h3><p>Certified professionals</p></div>
+            <div class="feature-card">🥗<h3>Nutrition Plans</h3><p>Personalized diet plans</p></div>
+            <div class="feature-card">📈<h3>Proven Results</h3><p>Thousands of transformations</p></div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 FitZone Fitness Center. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelector('.hamburger').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
